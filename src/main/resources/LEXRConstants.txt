@@ -1,0 +1,49 @@
+TEXT_WEIGHT = 1;
+KEYWORDS_WEIGHT = 1;
+
+HARD_CLUSTERING = false;
+REMOVE_DUPLICATES = false;
+
+// This parameter is used to filter rare words from the KeyGraph. Its value is the minimum document frequency.
+NODE_DF_MIN = 5;
+// This parameter is used to filter common words from the KeyGraph. Its value is maximum document frequency specified in percentage.
+NODE_DF_MAX = .3;
+
+// This parameter is used to filter rare links from the KeyGraph. Its value is the minimum correlation between the corresponding words.
+EDGE_CORRELATION_MIN = .1;
+
+// This parameter is used to filter rare links from the KeyGraph. Its value is the minimum document frequency.
+EDGE_DF_MIN = 2;
+
+// This parameter is used to filter small documents from the dataset. Its value is the minimum number of keywords for a document.
+DOC_KEYWORDS_SIZE_MIN = 2;
+
+CLUSTER_NODE_SIZE_MAX = 500;
+CLUSTER_NODE_SIZE_MIN = 5;
+
+TOPIC_MIN_SIZE = 5;
+
+// This parameter is used to assign documents to topics. Its value specifies the minimum cosine similarly between a document and the topic feature.
+DOC_SIM2KEYGRAPH_MIN = .1;//.23;//.3;
+
+
+// IGNORE =================================
+KEYWORDS_1_ENABLE = true;
+KEYWORDS_2_ENABLE = true;
+TEXT_ENABLE = true;
+KEYWORDS_2_WEIGHT = 1;
+CENTROID_KEYWORD_DF_MIN = 3;// not used
+SIMILARITY_KEYWORD_DF_MIN = 5;// not used
+EDGE_CP_MIN_TO_DUPLICATE = .70;//not used
+DOC_CHAR_SIZE_MAX = 2000; // not used
+DOC_SIM2CENTROID_MIN = 0.00;// not used
+CLUSTER_VAR_MAX = 1.99;	// not used
+CLUSTER_INTERSECT_MIN = .3;// .15
+TOPIC_MAX = 1000;
+CLUSTERING_ALG= betweenness;
+DATA_TOPIC_PATH = C:/tmp/keygraph/topics;
+DATA_KEYWORDS_1_PATH = C:/tmp/keygraph/NE/;
+DATA_KEYWORDS_2_PATH = C:/tmp/keygraph/NP/;
+DATA_TEXT_PATH = C:/tmp/keygraph/post/;
+DATA_DATE_PATH = C:/tmp/keygraph/date/;
+MALLET_PATH = C:\\mallet-2.0.8\\bin\\mallet.bat;
